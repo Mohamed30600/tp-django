@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_name'
+    'app_name',
+    'annuaire',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,8 @@ ROOT_URLCONF = 'project_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\Mohamed\Documents\Dossier data_engineer\Tp dataEngenering\Tp_django\tp-django\project_django\project_django\template\project_django'],
+        'DIRS': [r'C:\Users\Mohamed\Documents\Dossier data_engineer\Tp dataEngenering\Tp_django\tp-django\project_django\project_django\template\project_django',
+                r'C:\Users\Mohamed\Documents\Dossier data_engineer\Tp dataEngenering\Tp_django\tp-django\project_django\annuaire\templates\annuaire'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
