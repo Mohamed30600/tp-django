@@ -1,8 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
 
 <detailparticulier>
     <h1>Mettre le NOM Prénom du contact</h1>
     <p> Numéro de téléphone : </p>
 </detailparticulier>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>liste des contacts</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>NOM</strong></td>
+            <td><strong>Prenom</strong></td>
+            <td><strong> Telephone</strong></td>
+        </tr>
+        {%for contact in contacts %}
+       
+        <tr>
+           <td> {{contact.nom}}</td>
+            <td>{{contact.prenom}}</td>
+            <td>{{contact.telephone}}
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
 <a href ="">
     Retourner sur l'annuaire
 </a>
+{% endblock content %}

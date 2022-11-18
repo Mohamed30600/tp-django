@@ -22,8 +22,9 @@ from project_django.views import helloWorld
 
 urlpatterns = [
         path('admin/', admin.site.urls),
-        path('',helloWorld, name ="helloworld"),
+        path('',helloWorld, name ="acceuil"),
         path('addition/',addition,name='addition'),
-        path('annuaire/',listContacts,name="list-contact")
+        path('annuaire/',listContacts,name="list-contact"),
+      
     
 ]

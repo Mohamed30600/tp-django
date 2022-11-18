@@ -1,19 +1,28 @@
 
-<div class="list">
-    <div>
-        <particulier>
-            <h2>
-                <a href ="">
-                 
-                  
-                   
-                   <p>{{contact}}</p>
-                   
-           
+{% extends 'base.html' %}
+{% block content %}
 
-                </a>
-            </h2>
-        </particulier>
-    </div>
-  </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>liste des contacts</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>NOM</strong></td>
+                            <td><strong>Prenom</strong></td>
+                        </tr>
+                        {%for contact in contacts %}
+                       
+                        <tr>
+                           <td> <a href="">{{contact.nom}}</a></td>
+                            <td>{{contact.prenom}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+    
   
+  {% endblock content %}

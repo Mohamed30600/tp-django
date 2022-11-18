@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
+
 contacts = [
        {
           "nom": "Cassidy",
@@ -30,7 +31,7 @@ contacts = [
     ]
 
 def listContacts(request):
-    for contact in contacts:
-        contact = contact
-        print(contact)
-    return render (request,'list.html',{'contact':contact})
+   global contacts
+   return render (request,'list.html',{'contacts':contacts})
+    
+
