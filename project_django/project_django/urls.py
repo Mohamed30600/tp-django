@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import  path
+from annuaire.views import detailContact
 from annuaire.views import listContacts
 from project_django.views import addition
 
@@ -25,6 +26,7 @@ urlpatterns = [
         path('',helloWorld, name ="acceuil"),
         path('addition/',addition,name='addition'),
         path('annuaire/',listContacts,name="list-contact"),
+        path('detail-contact/',detailContact,name='detail-contact')
       
     
 ]
