@@ -30,25 +30,24 @@ contacts = [
           "telephone": "03 85 87 65 55"
         }
     ]
-
+liste=[]
 def listContacts(request):
    liste = Contact.objects.all()
    print(liste)
    return render (request,'list.html',{'contacts':liste})
   
-# def detailContact(request):
-#   global contacts
-#   nomContact="Vivien"
-#   for i in contacts :
-#    if i["nom"]== "Vivien":
+def detailContact(request):
+  global contacts
+  for i in contacts :
+   if i["nom"]== request.GET.get('nom'):
         
-#     return render (request,'contact.html',{'identiter':i})
+    return render (request,'contact.html',{'identiter':i})
     
 
-def detailContact(request,nom):
-  contact =Contact.objects.get(nom=nom)
-  liste1= Contact.objects.all()
+# def detailContact(request,nom):
+#   contact =Contact.objects.get(nom=nom)
+#   liste1= Contact.objects.all()
 
-  for i in liste1:
-      if i["nom"]== contact :
-       return render (request,'contact.html',{'identiter':i}) 
+#   for i in liste1:
+#       if i["nom"]== contact :
+#        return render (request,'contact.html',{'identiter':i}) 
