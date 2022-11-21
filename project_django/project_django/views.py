@@ -8,14 +8,13 @@ def helloWorld(request):
 
 
 def addition(request):
-    if 'num1' in request.GET:
-        val1 = int(request.GET['num1'])
-    else:
-        val1=False
-    if 'num2' in request.GET:
-        val2 = int(request.GET['num2'])
-    else:
-        val2=False
+    result=0
+    
+   
+    val1=(request.GET.get("num1", 0))
+    val2=(request.GET.get("num2", 0))
+    val11=int(val1)
+    val22=int(val2)
         
-    result = val1 + val2
+    result =val11+val22
     return render(request,"sum.html",{'result':result})

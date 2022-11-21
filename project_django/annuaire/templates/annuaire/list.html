@@ -15,7 +15,7 @@
                         {%for contact in contacts %}
                        
                         <tr>
-                           <td> <a href="http://localhost:8000/detail-contact?nom={{contact.nom}}">{{contact.nom}}</a></td>
+                           <td> <a href="http://localhost:8000/annuaire/detail-contact/?nom={{contact.nom}}">{{contact.nom}}</a></td>
                             <td>{{contact.prenom}}</td>
                         </tr>
                         {% endfor %}

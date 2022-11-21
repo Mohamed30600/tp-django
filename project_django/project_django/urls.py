@@ -26,7 +26,7 @@ urlpatterns = [
         path('',helloWorld, name ="acceuil"),
         path('addition/',addition,name='addition'),
         path('annuaire/',listContacts,name="list-contact"),
-        path('detail-contact/',detailContact,name='detail-contact')
+        path('annuaire/detail-contact/',detailContact,name='detail-contact')
       
     
 ]
