@@ -36,10 +36,20 @@ def listContacts(request):
    liste = Contact.objects.all()
    return render (request,'list.html',{'contacts':liste})
 
+def listEntreprise(request):
+   liste = Contact.objects.all()
+   return render (request,'listeEntreprise.html',{'contacts':liste})
+
+
+def listParticulier(request):
+   liste = Contact.objects.all()
+   return render (request,'listeParticulier.html',{'contacts':liste})
+
   
 def detailContact(request):
   nomValider =request.GET.get('nom')
   contacts=Contact.objects.filter(nom=nomValider).values() 
   for contact in contacts:
+    print (contact)
     return render (request,'contact.html',{'identiter':contact}) 
 

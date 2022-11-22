@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>liste des particuliers</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>liste des contacts</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>NOM</strong></td>
+                            <td><strong>Prenom</strong></td>
+                        </tr>
+                        {%for contact in contacts %}
+                       
+                        <tr>
+                            {% if contact.entreprise == 0 %}
+                            <td> <a href="http://localhost:8000/annuaire/detail-contact/?nom={{contact.nom}}">{{contact.nom}}</a></td>
+                            <td>{{contact.prenom}}</td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+  {% endblock content %}

@@ -1,24 +1,42 @@
+{% extends 'base.html' %} {% block content %}
+<div class="text-center">
+    <button type="button" class="btn btn-primary">
+        <a class="text-white" href="http://localhost:8000/annuaire/particuliers/"
+        >Page blanche</a
+        ><br />
+    </button>
+    <button type="button" class="btn btn-primary">
+        <a class="text-white" href="http://localhost:8000/annuaire/entreprise/"
+        >Page jaune</a
+        >
+    </button>
+</div>
 
-{% extends 'base.html' %}
-{% block content %}
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>liste des contacts</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>NOM</strong></td>
-                            <td><strong>Prenom</strong></td>
-                        </tr>
-                        {%for contact in contacts %}
-                       
-                        <tr>
-                           <td> <a href="http://localhost:8000/annuaire/detail-contact/?nom={{contact.nom}}">{{contact.nom}}</a></td>
-                            <td>{{contact.prenom}}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-  {% endblock content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>liste complete de la base de donnees sans tri</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>NOM</strong></td>
+      <td><strong>Prenom</strong></td>
+      <td>entre</td>
+    </tr>
+    {%for contact in contacts %}
+
+    <tr>
+      <td>
+        <a
+          href="http://localhost:8000/annuaire/detail-contact/?nom={{contact.nom}}"
+          >{{contact.nom}}</a
+        >
+      </td>
+      <td>{{contact.prenom}}</td>
+      <td>{{contact.entrepise}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}
